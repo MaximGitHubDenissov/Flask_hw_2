@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{super()}} - {{title}}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<p>Для дальнейшей работы необходима регистрация на сайте</p>
+<div class="container mt-5">
+    <h2>Форма регистрации</h2>
+    <form method="post" action="/login">
+      <div class="mb-3">
+        <label for="name" class="form-label">Имя</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email адрес</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+  </div>
+{% endblock %}
